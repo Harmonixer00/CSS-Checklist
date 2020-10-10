@@ -1,0 +1,1 @@
+A simple checklist coded almost entirely in CSS. 
