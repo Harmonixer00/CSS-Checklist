@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 *
 {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 body{
+    align-items: center;
+    background:#111;
     display:flex;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
-    background:#111;
 }
 .list{
-    position: relative;
     background: #fff;
+    position: relative;
     width: 350px;
 }
 .list h2{
@@ -26,61 +26,57 @@ body{
 .list ul{
     position: relative;
     padding: 20px;
-
 }
 .list ul li{
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    padding: 15px 0;
     position: relative;
     list-style-type: none;
-    padding: 15px 0;
-    border-bottom: 2px solid rgba(0,0,0,0.1);
 }
 .list ul li:last-child{
     border-bottom: none;
 }
 .list ul li label{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     cursor: pointer;
-
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 .list ul li label input{
-    visibility: hidden;
     appearance: none;
+    visibility: hidden;
 }
 .list ul li label p{
     position: absolute;
 }
 .list ul li label span{
-    position: relative;
-    width: 20px;
-    height: 20px;
+    align-items: center;
     border: 1px solid #ccc;
     border-radius: 50%;
     display: flex;
+    height: 20px;
+    position: relative;
     justify-content: center;
-    align-items: center;
+    width: 20px;   
 }
 .list ul li label span:before{
-    content:'';
-    position: absolute;
-    top: 5px;
-    width: 10px;
-    height: 5px;
     border-left: 2px solid #ccc;
     border-bottom: 2px solid #ccc;
+    content:'';
+    height: 5px;
+    position: absolute;
+    top: 5px;
     transform: rotate(-40deg);
-
+    width: 10px;
 }
 .list ul li label input:checked ~ p{
-text-decoration: line-through;
-color: #ccc;
+    color: #ccc;
+    text-decoration: line-through;
 }
 .list ul li label input:checked ~ span{
     background: #03a9f4;
     border: 1px solid #03a9f4;
-
 }
 .list ul li label input:checked ~ span::before{
     border-left: 2px solid #fff;
